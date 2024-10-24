@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão que cria item</title>
+</head>
+<body>
+    <button>Clique para adicionar um elemento a uma lista</button>
+    
+    <ul>
+        <li>Elemento 0</li>
+    </ul>
+    
+    <script>
+        const button = document.querySelector("button");
+        const ul = document.querySelector("ul");
+        let contador = 0;
+        
+        button.addEventListener("click", ()=>{
+            contador++;
+            let li = document.createElement("li");
+            ul.appendChild(li);   
+            li.innerText = "Elemento " + contador;
+        });
+    </script>
+</body>
+</html>
