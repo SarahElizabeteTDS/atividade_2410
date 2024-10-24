@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill</title>
+</head>
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Bill_Cipher.webp/220px-Bill_Cipher.webp.png" alt="" width="300px">
+    <p></p>
+    
+    <script>
+        let img = document.querySelector("img");
+        let p = document.querySelector("p");
+        
+        img.addEventListener("mouseenter", ()=>{
+            p.innerText = "Olá, mortal! Seja bem-vindo!";
+        });
+        img.addEventListener("mouseleave", ()=>{
+           p.innerText = "Já foi tarde!"; 
+        });
+        img.addEventListener("mousemove", ()=>{
+           p.innerText = "Pare!!! Isso faz cócegas."; 
+        });
+        img.addEventListener("click", ()=>{
+           p.innerText = "Pare de clicar em mim! :(("; 
+        });
+    </script>
+</body>
+</html>
