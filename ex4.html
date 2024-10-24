@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão contador</title>
+</head>
+<body>
+    <button>Clique aqui para contar</button>
+    <p></p>
+    
+    <script>
+        const button = document.querySelector('button');
+        const p = document.querySelector('p');
+        let contador = 0;
+        button.addEventListener("click", ()=>{
+            contador++;
+            p.innerText = "O botão foi clicado " + contador + " vezes";
+        })
+    </script>
+</body>
+</html>
