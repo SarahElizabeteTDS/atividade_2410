@@ -1,0 +1,1 @@
+O javascript é usado em aplicações frontend tanto pela sua versatilidade, quanto pela sua popularidade, por ser uma linguagem já muito difundida, ela é a principal usada na lógica por trás dos sites, permitindo a criação de conteúdos interativos e dinâmicos.
