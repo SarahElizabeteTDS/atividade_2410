@@ -42,14 +42,14 @@ form
 
 label
 {
-    color: rgb(216, 221, 216);
+    color: #04364A;
 }
 
 input
 {
     width: 400px;
     height: 30px;
-    color: white;
+    color: #04364A;
     background-color: #DAFFFB;
     outline: none;
     border-radius: 5px;
