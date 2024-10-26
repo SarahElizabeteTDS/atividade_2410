@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="" href="">
     <title>Cadastro</title>
 </head>
 <body>
@@ -94,4 +93,20 @@
             erros[3].style.display = 'none';
             inputs[3].classList.remove('invalido');
         }   
-}  
+    }  
+
+    inputs[0].addEventListener('input', validaNome);
+    inputs[1].addEventListener('input', validaEmail);
+    inputs[2].addEventListener('input', validaSenha);
+    inputs[3].addEventListener('input', validaconfirmacaoSenha);
+
+    document.querySelector('.alternarS').addEventListener('click', function() {
+        const senhaInput = inputs[2];
+        senhaInput.type = senhaInput.type === 'password' ? 'text' : 'password';
+    });
+
+    document.querySelector('.alternarCS').addEventListener('click', function() {
+        const confirmacaoSenhaInput = inputs[3];
+        confirmacaoSenhaInput.type = confirmacaoSenhaInput.type === 'password' ? 'text' : 'password';
+    });
+    </script>
