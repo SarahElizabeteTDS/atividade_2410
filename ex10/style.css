@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #176B87;
+}
+
+main
+{
+    height: 500px;
+    color: white;
+    font-size: 16px;
+    font-family: "Roboto", serif;
+    background-color: #04364A;
+    border-radius: 20px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid #DAFFFB 3px;
+}
+
+form
+{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+label
+{
+    color: rgb(216, 221, 216);
+}
+
+input
+{
+    width: 400px;
+    height: 30px;
+    color: white;
+    background-color: #DAFFFB;
+    outline: none;
+    border-radius: 5px;
+}
+
+input[type="submit"]
+{
+    width: 120px;
+    border-radius: 5px;
+    color: #DAFFFB;
+    background-color: #64CCC5;
+}
+
+span
+{
+    color: red;
+}
+
+button
+{
+    background-color: #64CCC5;
+    border-radius: 5px;
+    width: 50px;
+    margin-top: 2px;
+}
+
+.erro
+{
+    display: none;
+}
+
+.caixaForm
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.caixaSubmit
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input.invalido
+{
+    border:solid red 3px
+}

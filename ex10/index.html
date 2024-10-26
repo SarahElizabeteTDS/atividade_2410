@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="" href="">
+    <title>Cadastro</title>
+</head>
+<body>
+    <main>
+        <form action="#" method="post">
+            <div class="caixaForm">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Informe seu nome">
+                <span class="erro">Nome inválido: Necessita de no mínimo 3 caracteres.</span>
+            </div>
+            <div class="caixaForm">
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" placeholder="Informe seu email">
+                <span class="erro">Email inválido!</span>
+            </div>
+            <div class="caixaForm">
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="senha" placeholder="Informe sua senha">
+                <span class="erro">Senha inválida: Necessita de no mínimo 8 caracteres.</span>
+                <button class="alternarS">&#128065;</button>
+            </div>
+            <div class="caixaForm">
+                <label for="confirmacaoSenha">Confirmar senha:</label>
+                <input type="password" name="confirmacaoSenha" id="confirmacaoSenha" placeholder="Confirme sua senha">
+                <span class="erro">A confirmação não corresponde à senha informada.</span>
+                <button class="alternarCS">&#128065;</button>
+            </div>
+            <div class="caixaSubmit">
+                <input type="submit"></input>
+            </div>
+        </form>
+    </main>
+    <script>
+    const inputs = document.querySelectorAll('input');
+    const erros = document.querySelectorAll('.erro');
+    let border = document.querySelector('main');
+    function validaNome()
+    {
+        if(inputs[0].value.length < 3)
+        {
+            erros[0].style.display = 'block';
+            inputs[0].classList.add('inválido');
+        }
+        else
+        {
+            erros[0].style.display = 'none';
+            inputs[0].classList.remove('inválido');
+        }
+    }
+    function validaEmail()
+    {
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if(!emailRegex.test(inputs[1].value))
+        {
+            erros[1].style.display = 'block';
+            inputs[1].classList.add('invalido');
+        }
+        else
+        {
+            erros[1].style.display = 'none';
+            inputs[1].classList.remove('invalido');
+        }   
+    }
+    function validaSenha()
+    {
+        const senhaRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+        if(!senhaRegex.test(inputs[2].value))
+        {
+            erros[2].style.display = 'block';
+            inputs[2].classList.add('invalido');
+        }
+        else
+        {
+            erros[2].style.display = 'none';
+            inputs[2].classList.remove('invalido');
+        }   
+    }   
+    function validaconfirmacaoSenha()
+    {
+        if(inputs[3].value !== inputs[2].value)
+        {
+            erros[3].style.display = 'block';
+            inputs[3].classList.add('invalido');
+        }
+        else
+        {
+            erros[3].style.display = 'none';
+            inputs[3].classList.remove('invalido');
+        }   
+}  
